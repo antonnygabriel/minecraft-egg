@@ -1,0 +1,37 @@
+{
+    "meta": {
+      "version": "PTDL_v2",
+      "name": "Minecraft Universal",
+      "description": "Egg universal para Minecraft com menu interativo",
+      "author": "Tonydoxv"
+    },
+    "variables": [
+      {
+        "name": "SERVER_TYPE",
+        "description": "Tipo do servidor (paper, vanilla, purpur, fabric, forge)",
+        "env_variable": "SERVER_TYPE",
+        "default_value": "paper",
+        "user_viewable": true,
+        "user_editable": true,
+        "required": true
+      },
+      {
+        "name": "MC_VERSION",
+        "description": "Versão do Minecraft (ex: 1.20.4)",
+        "env_variable": "MC_VERSION",
+        "default_value": "1.20.4",
+        "user_viewable": true,
+        "user_editable": true,
+        "required": true
+      }
+    ],
+    "scripts": {
+      "installation": {
+        "script": "#!/bin/bash\nbash <(curl -s https://raw.githubusercontent.com/antonnygabriel/miencraft-egg/refs/heads/main/install.sh)"
+      }
+    },
+    "docker_images": {
+      "ghcr.io/pterodactyl/yolks:java_17": "Java 17 (Recomendado para versões recentes)"
+    }
+  }
+  
